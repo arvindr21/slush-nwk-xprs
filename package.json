@@ -1,7 +1,7 @@
 {
     "name": "slush-nwk-xprs",
     "description": "A slush generator to generate node-webkit express apps",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "homepage": "https://github.com/arvindr21/slush-nwk-xprs",
     "author": {
         "name": "Arvind Ravulavaru",
@@ -38,6 +38,8 @@
         "iniparser": "^1.0.5"
     },
     "keywords": [
-        "slushgenerator"
+        "slushgenerator",
+        "node-webkit",
+        "express"
     ]
 }
