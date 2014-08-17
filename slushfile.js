@@ -26,7 +26,7 @@ var defaults = (function() {
         workingDirName = process.cwd().split('/').pop().split('\\').pop(),
         osUserName = homeDir && homeDir.split('/').pop() || 'root',
         configFile = homeDir + '/.gitconfig',
-        user = {};
+        user = {}
     if (require('fs').existsSync(configFile)) {
         user = require('iniparser').parseSync(configFile).user;
     }
@@ -50,6 +50,7 @@ gulp.task('default', function(done) {
                 return done();
             }
             answers.appNameSlug = _.slugify(answers.appName);
+            answers.isWin = /^win/.test(process.platform);
             gulp.src([__dirname + '/templates/fonts/**'])
                 .pipe(conflict('./public/fonts/'))
                 .pipe(gulp.dest('./public/fonts/'));
